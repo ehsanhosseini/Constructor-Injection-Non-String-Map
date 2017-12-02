@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+<bean id="ans1" class="NonString.Answer">
+<constructor-arg value="100"></constructor-arg>
+<constructor-arg value="Java is platform"></constructor-arg>
+<constructor-arg value="From DC"></constructor-arg>
+</bean>
+
+<bean id="ans2" class="NonString.Answer">
+<constructor-arg value="101"></constructor-arg>
+<constructor-arg value="Java is a Bank name"></constructor-arg>
+<constructor-arg value="From CA"></constructor-arg>
+</bean>
+
+
+<bean id="use1" class="NonString.User">
+<constructor-arg value="By jamshid"></constructor-arg>
+</bean>
+
+<bean id="use2" class="NonString.User">
+<constructor-arg value="By Majed"></constructor-arg>
+</bean>
+
+<bean id="q" class="NonString.Question">
+<constructor-arg value="1"></constructor-arg>
+<constructor-arg value="What is Java? "></constructor-arg>
+<constructor-arg>
+<map>  
+<entry key-ref="ans1" value-ref="use1"></entry>  
+<entry key-ref="ans2" value-ref="use2"></entry>  
+</map>
+</constructor-arg>
+
+</bean>
+
+</beans>
